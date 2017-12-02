@@ -1,0 +1,8 @@
+actions\BaseActions.class
+pages\BasePage.class
+pages\SPBPage.class
+actions\TestProperties.class
+pages\HomePage.class
+actions\SPBPageActions.class
+actions\HomeActions.class
+pages\AdDetailsPage.class
