@@ -38,7 +38,7 @@ public class SPBPageActions extends  BaseActions {
         String priceStr = "";
         String path = "";
 
-        for (i = 1; i < page.getAdList().size(); i++) {
+        for (i = 3;i < page.getAdList().size(); i++) {
             dateOfAd = page.getPathToAd().concat("[" + i + "]//*[contains(text(),'" + date + "')]");
             priceStr = page.getPathToAd().concat("[" + i + "]//*[@class='about']");
             path = page.getPathToAd().concat("[" + i + "]");
@@ -52,6 +52,13 @@ public class SPBPageActions extends  BaseActions {
                 break;
             } else continue;
         }
+    }
+
+    public static boolean checkPrice(int lowestPrice, int highestPrice) {
+        if((Integer.parseInt(page.getPrice().getText().replaceAll("[^0-9]", "")) > lowestPrice)
+                && (Integer.parseInt(page.getPrice().getText().replaceAll("[^0-9]", "")) < highestPrice)) {
+            return true;
+        } else return false;
     }
 
 }

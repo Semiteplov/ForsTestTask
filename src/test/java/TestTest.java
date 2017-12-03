@@ -30,6 +30,7 @@ public class TestTest {
     public void findRightAd() {
         findPAds(false, "MacBook pro");
         findAdsWithParametres("Вчера", 50000, 100000);
+        assert checkPrice(50000, 100000);
     }
 
     @AfterClass

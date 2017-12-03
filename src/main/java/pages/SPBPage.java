@@ -18,6 +18,9 @@ public class SPBPage extends BasePage {
     @FindBy(xpath = "//*[contains(text(),'По вашему запросу ничего не найдено')]")
     private WebElement noSearchResultMsg;
 
+    @FindBy(xpath = "//*[@class='item-view-content']//*[@class='price-value-string js-price-value-string']")
+    private WebElement price;
+
     @FindBy(xpath = "//*[@class='js-catalog_after-ads']/div")
     private List<WebElement> adList;
 
@@ -44,4 +47,8 @@ public class SPBPage extends BasePage {
     }
 
     public String getPathToAd() { return pathToAd; }
+
+    public WebElement getPrice() {
+        return price;
+    }
 }
